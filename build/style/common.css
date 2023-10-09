@@ -1,0 +1,57 @@
+.common__h1,
+.common__h4 {
+  margin: 0;
+  font-weight: 400;
+  color: #000;
+}
+.common__h1 span:not([class]),
+.common__h4 span:not([class]) {
+  color: $gold;
+}
+.common__h1 mark:not([class]),
+.common__h4 mark:not([class]) {
+  display: block;
+  margin: 0 0 4px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $gold;
+  text-transform: uppercase;
+  background: none;
+}
+.common__h1 {
+  font-size: 80px;
+  line-height: 88px;
+}
+.common__h4 {
+  font-size: 32px;
+  line-height: 32px;
+}
+.common__text {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: $black;
+}
+.common__text p:not([class]) {
+  margin: 0;
+}
+.common__text p:not([class]) + p:not([class]) {
+  margin: 14px 0 0;
+}
+.common__btn {
+  display: block;
+  padding: 13px 32px 14px 32px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: $black;
+  border: 2px solid $dust;
+  border-radius: 27px;
+  -webkit-transition: color 0.5s 0s ease, border 0.5s 0s ease;
+  transition: color 0.5s 0s ease, border 0.5s 0s ease;
+}
+.common__btn:hover {
+  color: $gold;
+  border: 2px solid $gold;
+}

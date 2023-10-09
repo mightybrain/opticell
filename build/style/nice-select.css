@@ -1,0 +1,87 @@
+.nice-select {
+  border-radius: 8px;
+  border: 2px solid #a09e9f;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #fff;
+  height: 59px;
+  width: 100%;
+  padding: 13px 24px 19px;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+.nice-select::after {
+  border-bottom: 2px solid #a09e9f;
+  border-right: 2px solid #a09e9f;
+  content: "";
+  display: block;
+  height: 6px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: 22px;
+  top: 26px;
+  -webkit-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  width: 6px;
+}
+.nice-select.open::after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.nice-select.open .nice-select-dropdown {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+}
+.nice-select .nice-select-dropdown {
+  background-color: #fff;
+  border-radius: 8px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  bottom: calc(100% + 4px);
+  left: 0;
+  padding: 24px;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(19px);
+  transform: scale(0.75) translateY(19px);
+  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+  opacity: 0;
+  overflow: hidden;
+}
+.nice-select .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+.nice-select .option {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #231f20;
+}
+.no-csspointerevents .nice-select .nice-select-dropdown {
+  display: none;
+}
+.no-csspointerevents .nice-select.open .nice-select-dropdown {
+  display: block;
+}

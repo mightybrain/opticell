@@ -1,0 +1,185 @@
+.product
+  display flex
+  flex-direction column
+  gap 160px
+  padding 0 0 160px
+
+  &__details
+    position relative
+    padding 168px 0 80px
+    background-color $black
+    overflow hidden
+
+    &-inner
+      display flex
+      flex-direction column
+      gap 40px
+      padding 0 0 0 160px
+
+    &-row
+      display flex
+      justify-content space-between
+      width 100%
+
+    &-col
+      &:first-child
+        display flex
+        flex-direction column
+        width 736px
+
+      &:last-child
+        width calc(50% - 80px)
+
+  &__gallery
+    display flex
+    gap 64px
+
+    &-thumbs
+      &-list
+        display flex
+        flex-direction column
+        gap 8px
+
+      &-item
+        display flex
+        justify-content center
+        align-items center
+        width 130px
+        height 130px
+        padding 7px
+        border-radius 8px
+        border 1px solid $gray
+
+        &-image
+          display block
+          max-width 100%
+          max-height 100%
+
+    &-main
+      &-image
+        display block
+        height 545px
+
+  &__kinds
+    display flex
+    align-items flex-end
+    gap 32px
+    margin 44px 0 0
+
+  &__format
+    display flex
+    align-items flex-end
+    gap 16px
+
+    &-heading
+      font-size 28px
+      line-height 28px
+      font-weight 400
+      color $feather
+
+    &-list
+      display flex
+      gap 16px
+
+    &-item
+      &-image
+        display block
+        height 96px
+
+  &__packages
+    display flex
+    align-items flex-end
+    gap 16px
+
+    &-heading
+      font-size 28px
+      line-height 28px
+      font-weight 400
+      color $feather
+
+    &-select
+      width 122px
+
+  &__info
+    display flex
+    flex-direction column
+    align-items flex-start
+    gap 40px
+    max-width 576px
+    margin -4px 0 0
+
+  &__heading
+    font-size 48px
+    line-height 46px
+    font-weight 700
+    color $white
+
+  &__feature
+    margin 0
+    font-size 20px
+    line-height 24px
+    font-weight 500
+    color $white
+    text-transform uppercase
+
+    & span:not([class])
+      display block
+      margin 16px 0 0
+      font-size 14px
+      line-height 21px
+      font-weight 400
+      text-transform none
+
+  &__params
+    width 100%
+
+    &-list
+      display flex
+      flex-direction column
+      gap 16px
+      margin 26px 0 0
+
+    &-item
+      display flex
+      align-items flex-end
+      font-size 18px
+      line-height 27px
+      font-weight 400
+      color $white
+
+      & span:first-child
+        order -1
+
+      &::before
+        content ''
+        position relative
+        top -8px
+        flex-grow 1
+        display block
+        width 10px
+        height 1px
+        margin 0 16px
+        background-color $gray
+
+  &__buy-btn
+    display flex
+    align-items center
+    color $gold
+    border 2px solid $gold
+    cursor pointer
+
+    &-icon
+      order -1
+      display block
+      width 24px
+      height 24px
+      margin 0 10px 0 0
+      fill $gold
+      transition fill .5s 0s ease
+
+.product__buy-btn:hover
+  color $white
+  border 2px solid $white
+
+  & .product__buy-btn-icon
+    fill $white

@@ -1,0 +1,52 @@
+@import "./fonts.styl"
+@import "./vars.styl"
+@import "./common.styl"
+
+*
+	box-sizing border-box
+
+ul
+	margin 0
+	padding 0
+
+li
+	list-style-type none
+
+a
+	text-decoration none
+
+button
+	background none
+	border none
+
+html
+	font-family "GothamPro"
+
+body
+	display flex
+	flex-direction column
+	min-height 100vh
+	background-color $smoke
+
+main
+	flex-grow 1
+	padding 0
+	overflow hidden
+
+.container
+	width calc(100% - 128px)
+	margin 0 auto
+	max-width 1792px
+
+@import "partials/header.styl"
+@import "partials/footer.styl"
+@import "partials/breadcrumbs.styl"
+@import "partials/intro.styl"
+@import "partials/products-preview.styl"
+@import "partials/features.styl"
+@import "partials/media.styl"
+@import "partials/video.styl"
+@import "partials/about.styl"
+
+@import "views/index.styl"
+@import "views/product.styl"

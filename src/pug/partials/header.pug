@@ -1,0 +1,31 @@
+header.header
+	.container
+		.header__inner
+			.header__logo
+				a.header__logo-link(href="" target="_blank")
+					svg.header__logo-image
+						use(xlink:href="#logo")
+
+			nav.header__menu
+				ul.header__menu-list
+					li.header__menu-item
+						a.header__menu-item-link(href="") Продукция
+						svg.header__menu-item-arrow
+							use(xlink:href="#arrow-down")
+
+						.header__submenu
+							ul.header__submenu-list 
+								li.header__submenu-item
+									a.header__submenu-item-link(href="") Basic
+
+								li.header__submenu-item
+									a.header__submenu-item-link(href="") Professional
+
+								li.header__submenu-item
+									a.header__submenu-item-link(href="") Specialty
+
+					li.header__menu-item
+						a.header__menu-item-link(href="") О нас
+
+					li.header__menu-item
+						a.header__menu-item-link(href="") Контакты

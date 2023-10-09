@@ -1,0 +1,33 @@
+.video
+  position relative
+
+  &__frame
+    display block
+    width 100%
+    border-radius 24px
+
+  &__play-btn
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    display flex
+    justify-content center
+    align-items center
+    width 112px
+    height 112px
+    border-radius 50%
+    background-color alpha($white, .1)
+    backdrop-filter blur(3px)
+    cursor pointer
+
+    &-icon
+      display block
+      width 64px
+      height 64px
+      fill $white
+      transition fill .5s 0s ease
+
+.video__play-btn:hover
+  & .video__play-btn-icon
+    fill $gold

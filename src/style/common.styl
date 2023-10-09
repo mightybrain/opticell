@@ -1,0 +1,54 @@
+.common
+	&__h1,
+	&__h4
+		margin 0
+		font-weight 400
+		color black
+
+		& span:not([class])
+			color $gold
+
+		& mark:not([class])
+			display block
+			margin 0 0 4px
+			font-size 20px
+			line-height 24px
+			font-weight 500
+			color $gold
+			text-transform uppercase
+			background none
+
+	&__h1
+		font-size 80px
+		line-height 88px
+
+	&__h4
+		font-size 32px
+		line-height 32px
+
+	&__text
+		font-size 18px
+		line-height 27px
+		font-weight 400
+		color $black
+
+		& p:not([class])
+			margin 0
+
+		& p:not([class]) + p:not([class])
+			margin 14px 0 0
+
+	&__btn
+		display block
+		padding 13px 32px 14px 32px
+		font-size 18px
+		line-height 27px
+		font-weight 500
+		color $black
+		border 2px solid $dust
+		border-radius 27px
+		transition color .5s 0s ease, border .5s 0s ease
+
+		&:hover
+			color $gold
+			border 2px solid $gold

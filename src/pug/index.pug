@@ -1,0 +1,113 @@
+doctype html
+html(lang="ru")
+	
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+		link(rel="stylesheet" href="style/normalize.css" type="text/css")
+		link(rel="stylesheet" href="style/nice-select.css" type="text/css")
+		link(rel="stylesheet" href="style/swiper.css" type="text/css")
+		link(rel="stylesheet" href="style/main.css" type="text/css")
+		title Opticell
+	
+	body
+		div(style="display: none")
+			include ../../build/images/sprite.svg
+
+		//= partials/header.pug
+
+		main
+			.index
+				
+				.index__intro
+					section.intro
+						img.intro__logo-image(src="images/logo.svg" alt="")
+
+						.intro__battery-images
+							img.intro__battery-image(src="images/battery-01.png" alt="")
+							img.intro__battery-image(src="images/battery-01.png" alt="")
+
+						.container.intro__container
+							.intro__inner
+								img.intro__bear-image(src="images/bear-01.png" alt="")
+
+								.intro__info
+									h1.common__h1.intro__heading #[span Новый герой —] привычное качество
+									.common__text.intro__description
+										p Батарейки нашего бренда Opticell позволят вам использовать привычные вам качественные элементы питания с долгим сроком службы
+
+				.index__products-preview
+					.container
+						section.products-preview
+							ul.products-preview__list
+								li.products-preview__item
+									img.products-preview__item-image(src="images/content-01.jpg" alt="")
+									.products-preview__item-info
+										h1.common__h1.products-preview__item-heading #[span Щелочные] батарейки
+										.common__text.products-preview__item-description
+											p Их часто используют в игровых контроллерах, лампах и т.д. У щелочных батареек Opticell широкая линейка типов и размеров, поэтому у нас всегда найдется подходящий для Вас продукт.
+										a.common__btn.products-preview__item-link(href="") Подробнее
+
+								li.products-preview__item
+									img.products-preview__item-image(src="images/content-02.jpg" alt="")
+									.products-preview__item-info
+										h1.common__h1.products-preview__item-heading #[span Литиевые] батарейки
+										.common__text.products-preview__item-description
+											p Батарейки типа "таблетка" идеально работают не только с часами, но также пультами дистанционного управления, будильниками и многими другими устройствами, гарантируя продолжительный заряд энергии.
+										a.common__btn.products-preview__item-link(href="") Подробнее
+
+				.index__features
+					.container
+						section.features
+
+							ul.features__list
+								li.features__item
+									img.features__item-image(src="images/feature-01.jpg")
+									h4.common__h4.features__item-heading Срок хранения до 10 лет
+									.common__text.features__item-description
+										p Благодаря особой технологии неиспользованные батарейки могут сохранять заряд до 10 лет при хранении в обычных условиях
+
+								li.features__item
+									img.features__item-image(src="images/feature-02.jpg")
+									h4.common__h4.features__item-heading Защита от протекания
+									.common__text.features__item-description
+										p Высококачественное внешнее нейлоновое покрытие защищает батарейки Opticell от протекания
+
+								li.features__item
+									img.features__item-image(src="images/feature-03.jpg")
+									h4.common__h4.features__item-heading Для бытовых устройств
+									.common__text.features__item-description
+										p Батарейки Opticell универсальны. Они подходят для часто используемых бытовых устройств
+
+				.index__media
+					.container
+						section.media
+							.media__info
+								h1.common__h1.media__heading #[mark Качество] Тестирование батареек
+								.common__text.media__description Lorem Ipsum — это текст-"рыба», часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+
+							.swiper-container.media__slider.js-media-swiper
+								ul.swiper-wrapper.media__list
+									li.swiper-slide.media__item
+										//= partials/video.pug
+
+									li.swiper-slide.media__item
+										//= partials/video.pug
+
+									li.swiper-slide.media__item
+										//= partials/video.pug
+
+								.media__slider-nav
+									button.media__slider-nav-btn.js-media-swiper-prev-btn
+										svg.media__slider-nav-btn-arrow
+											use(xlink:href="#arrow-left")
+									button.media__slider-nav-btn.js-media-swiper-next-btn
+										svg.media__slider-nav-btn-arrow
+											use(xlink:href="#arrow-right")
+
+		//= partials/footer.pug
+
+		script(src="script/vendor.js" type="text/javascript")
+		script(src="script/script.js")
+
+

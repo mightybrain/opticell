@@ -1,0 +1,64 @@
+.intro
+  position relative
+  height 100vh
+  max-height 984px
+  min-height 768px
+  padding 152px 0 30px
+  background-color $black
+  overflow hidden
+
+  &__logo-image
+    position absolute
+    bottom 0
+    left 50%
+    transform translateX(-50%)
+    display block
+    width 96%
+    fill $white
+    opacity .03
+
+  &__battery-image
+    position absolute
+    top 50%
+    display block
+    width 80%
+
+    &:first-child
+      right 100%
+      transform translate(8%, -50%)
+
+    &:last-child
+      left 100%
+      transform translate(-8%, -50%)
+
+  &__container
+    height 100%
+
+  &__inner
+    position relative
+    display flex
+    align-items center
+    height 100%
+
+  &__bear-image
+    display block
+    margin 0 auto
+    max-width 27%
+    max-height 100%
+
+  &__info
+    order -1
+    width 42%
+    max-width 768px
+    margin 0 0 0 160px
+
+  &__heading
+    font-size 88px
+    line-height 84px
+    font-weight 700
+    color $white
+
+  &__description
+    max-width 618px
+    margin 72px 0 0
+    color $white

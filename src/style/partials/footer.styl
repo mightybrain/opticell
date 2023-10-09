@@ -1,0 +1,132 @@
+.footer
+  &__row
+    &:first-child
+      padding 80px 0
+      background-color $white
+
+    &:last-child
+      background-color $black
+
+    &-inner
+      display flex
+
+  &__col
+    display flex
+    flex-direction column
+    width calc(50% - 12px)
+
+  &__logo
+    &-image
+      display block
+      width 207px
+      height 34px
+      fill $black
+
+  &__social
+    margin 24px 0 0
+
+    &-list
+      display flex
+      gap 16px
+
+    &-item
+      &-link
+        &-image
+          display block
+          width 48px
+          height 48px
+          fill $black
+          transition fill .5s 0s ease
+
+  &__menu
+    position relative
+    top -2px
+    display flex
+    gap 24px
+
+    &-group
+      display flex
+      flex-direction column
+      gap 25px
+      width calc(50% - 12px)
+
+    &-list
+      display flex
+      flex-direction column
+      gap 17px
+
+    &-item
+      &-link
+        font-size 17px
+        line-height 25px
+        font-weight 500
+        color $black
+        text-transform uppercase
+        transition color .5s 0s ease
+
+        &:hover
+          color $gold
+
+  &__copyright
+    position relative
+    background-color $dust
+    width 576px
+    min-height 91px
+    padding 32px 96px
+    font-size 18px
+    line-height 27px
+    font-weight 400
+    color $black
+
+    &::before
+      content ''
+      position absolute
+      top 0
+      right 100%
+      display block
+      width 100vw
+      height 100%
+      background-color $dust
+
+  &__credits
+    flex-grow 1
+    display flex
+    align-items center
+    justify-content space-between
+    min-height 91px
+    padding 32px 96px 32px 160px
+    font-size 13px
+    line-height 19px
+    font-weight 400
+    color $white
+    text-transform uppercase
+
+  &__rules
+    color inherit
+    transition color .5s 0s ease
+
+    &:hover
+      color $gold
+
+  &__author
+    color inherit
+    transition color .5s 0s ease
+
+    &:hover
+      color $gold
+
+    & span:not([class])
+      font-weight 500
+
+.footer__row:first-child
+  & .footer__row-inner
+    display flex
+    gap 24px
+    justify-content space-between
+
+  & .footer__col:first-child
+    padding 0 0 0 96px
+
+.footer__social-item-link:hover
+  & .footer__social-item-link-image
+    fill $gold

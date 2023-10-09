@@ -1,0 +1,72 @@
+.nice-select
+  border-radius 8px
+  border 2px solid #A09E9F
+  cursor pointer
+  display block
+  font-size 18px
+  line-height 27px
+  font-weight 500
+  color #FFFFFF
+  height 59px
+  width 100%
+  padding 13px 24px 19px
+  position relative
+  transition all .2s ease-in-out
+  white-space nowrap
+  
+.nice-select::after
+  border-bottom 2px solid #A09E9F
+  border-right 2px solid #A09E9F
+  content ""
+  display block
+  height 6px
+  margin-top -4px
+  pointer-events none
+  position absolute
+  right 22px
+  top 26px
+  transform-origin 66% 66%
+  transform rotate(-135deg)
+  transition all .15s ease-in-out
+  width 6px
+
+.nice-select.open::after
+  transform rotate(45deg)
+  
+.nice-select.open .nice-select-dropdown
+  opacity 1
+  pointer-events all
+  transform scale(1) translateY(0)
+
+.nice-select .nice-select-dropdown
+  background-color #FFFFFF
+  border-radius 8px
+  pointer-events none
+  position absolute
+  width 100%
+  bottom calc(100% + 4px)
+  left 0
+  padding 24px
+  transform-origin 50% 0
+  transform scale(0.75) translateY(19px)
+  transition all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out
+  z-index 9
+  opacity 0
+  overflow hidden
+
+.nice-select .list
+  display flex
+  flex-direction column
+  gap 16px
+
+.nice-select .option
+  font-size 18px
+  line-height 27px
+  font-weight 500
+  color #231F20
+
+.no-csspointerevents .nice-select .nice-select-dropdown
+  display none
+
+.no-csspointerevents .nice-select.open .nice-select-dropdown
+  display block

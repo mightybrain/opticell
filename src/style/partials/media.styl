@@ -1,0 +1,54 @@
+.media
+  display flex
+  flex-direction column
+  gap 69px
+
+  &__info
+    display flex
+    align-items flex-end
+    gap 24px
+
+  &__heading
+    width calc(50% - 12px)
+
+  &__description
+    position relative
+    top 5px
+    width 30%
+    max-width 548px
+
+  &__slider
+    position relative
+    width 100%
+    overflow visible
+
+    &-nav
+      position absolute
+      right 0
+      bottom calc(100% + 64px)
+      display flex
+      justify-content space-between
+      width 152px
+
+      &-btn
+        padding 0
+        cursor pointer
+
+        &-arrow
+          display block
+          width 64px
+          height 64px
+          fill $black
+          transition fill .5s 0s ease
+
+  &__list
+    height auto
+
+.media__slider-nav-btn:hover
+  & .media__slider-nav-btn-arrow
+    fill $gold
+
+.media__slider-nav-btn.swiper-button-disabled
+  & .media__slider-nav-btn-arrow
+    fill $gray
+    cursor default

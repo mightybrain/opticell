@@ -1,0 +1,29 @@
+.breadcrumbs
+  &__list
+    display flex
+    gap 9px
+
+  &__item
+    display flex
+    align-items center
+    font-size 18px
+    line-height 27px
+    font-weight 400
+    color $feather
+
+    &:not(:first-child)
+      &::before
+        content ''
+        display block
+        width 16px
+        height 2px
+        margin 0 9px 0 0
+        background-color $gold
+        border-radius 1px
+
+    &-link
+      color $white
+      transition color .5s 0s ease
+
+      &:hover
+        color $gold
