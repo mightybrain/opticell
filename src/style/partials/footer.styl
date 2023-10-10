@@ -15,6 +15,9 @@
     flex-direction column
     width calc(50% - 12px)
 
+    &:first-child
+      padding 0 0 0 5%
+
   &__logo
     &-image
       display block
@@ -70,9 +73,8 @@
   &__copyright
     position relative
     background-color $dust
-    width 576px
-    min-height 91px
-    padding 32px 96px
+    height 100%
+    padding 32px 5%
     font-size 18px
     line-height 27px
     font-weight 400
@@ -93,10 +95,10 @@
     display flex
     align-items center
     justify-content space-between
-    min-height 91px
-    padding 32px 96px 32px 160px
+    height 100%
+    padding 32px 5% 32px 9%
     font-size 13px
-    line-height 19px
+    line-height 27px
     font-weight 400
     color $white
     text-transform uppercase
@@ -123,9 +125,6 @@
     display flex
     gap 24px
     justify-content space-between
-
-  & .footer__col:first-child
-    padding 0 0 0 96px
 
 .footer__social-item-link:hover
   & .footer__social-item-link-image

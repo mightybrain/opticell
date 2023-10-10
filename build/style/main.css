@@ -137,16 +137,16 @@ main {
   justify-content: space-between;
 }
 .header__logo {
-  margin: 0 0 0 160px;
+  margin: 0 0 0 9%;
 }
 .header__logo-image {
   display: block;
-  width: 169px;
+  width: 164px;
   height: 27px;
   fill: #fff;
 }
 .header__menu {
-  margin: -2px 48px 0 0;
+  margin: -2px 4% 0 0;
 }
 .header__menu-list {
   display: -webkit-box;
@@ -262,6 +262,9 @@ main {
   flex-direction: column;
   width: calc(50% - 12px);
 }
+.footer__col:first-child {
+  padding: 0 0 0 5%;
+}
 .footer__logo-image {
   display: block;
   width: 207px;
@@ -329,9 +332,8 @@ main {
 .footer__copyright {
   position: relative;
   background-color: #e2e2e2;
-  width: 576px;
-  min-height: 91px;
-  padding: 32px 96px;
+  height: 100%;
+  padding: 32px 5%;
   font-size: 18px;
   line-height: 27px;
   font-weight: 400;
@@ -360,10 +362,10 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 91px;
-  padding: 32px 96px 32px 160px;
+  height: 100%;
+  padding: 32px 5% 32px 9%;
   font-size: 13px;
-  line-height: 19px;
+  line-height: 27px;
   font-weight: 400;
   color: #fff;
   text-transform: uppercase;
@@ -395,9 +397,6 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-.footer__row:first-child .footer__col:first-child {
-  padding: 0 0 0 96px;
 }
 .footer__social-item-link:hover .footer__social-item-link-image {
   fill: #d08f55;
@@ -497,8 +496,7 @@ main {
   -ms-flex-order: -1;
   order: -1;
   width: 42%;
-  max-width: 768px;
-  margin: 0 0 0 160px;
+  margin: 0 0 0 9%;
 }
 .intro__heading {
   font-size: 88px;
@@ -548,7 +546,7 @@ main {
   -ms-flex-align: start;
   align-items: flex-start;
   width: calc(50% - 12px);
-  padding: 0 160px;
+  padding: 0 9%;
 }
 .products-preview__item-description {
   margin: 29px 0 0;
@@ -724,9 +722,9 @@ main {
   -ms-flex-align: start;
   align-items: flex-start;
   width: calc(50% - 12px);
+  padding: 0 9% 0 0;
 }
 .about__item-description {
-  max-width: 684px;
   margin: 29px 0 0;
 }
 .about__item-media {
@@ -772,7 +770,7 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 40px;
-  padding: 0 0 0 160px;
+  padding: 0 0 0 9%;
 }
 .product__details-row {
   display: -webkit-box;
@@ -902,7 +900,7 @@ main {
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 40px;
-  max-width: 576px;
+  width: 78%;
   margin: -4px 0 0;
 }
 .product__heading {
