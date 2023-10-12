@@ -4,5 +4,17 @@
   gap 160px
   padding 0 0 160px
 
+  @media $laptop
+    gap 80px
+    padding 0 0 80px
+
+  @media $tablet
+    gap 64px
+    padding 0 0 64px
+
   &__media
-    overflow hidden
+    @media $tablet
+      padding 23px 0 0
+
+    @media $mobile
+      padding 0

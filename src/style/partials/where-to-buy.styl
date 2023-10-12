@@ -1,0 +1,44 @@
+.where-to-buy
+  &__heading
+    color $gold
+
+  &__description
+    margin 16px 0 0
+    
+  &__list
+    display flex
+    flex-wrap wrap
+    row-gap 24px
+    column-gap 58px
+    margin 34px 0 0
+
+    @media $laptop
+      column-gap 24px
+
+    @media $mobile
+      flex-direction column
+      row-gap 27px
+      column-gap 0
+
+  &__item
+    display flex
+    align-items center
+    gap 24px
+    width calc(50% - 29px)
+
+    @media $laptop
+      width calc(50% - 12px)
+
+    @media $mobile
+      width 100%
+
+    &-image
+      display block
+      width 56px
+
+    &-link
+      @media $tablet
+        width auto
+
+      @media $mobile
+        width 100%

@@ -13,6 +13,11 @@
   position relative
   transition all .2s ease-in-out
   white-space nowrap
+
+  @media $laptop
+    height 56px
+    font-size 16px
+    line-height 24px
   
 .nice-select::after
   border-bottom 2px solid #A09E9F
@@ -64,6 +69,10 @@
   line-height 27px
   font-weight 500
   color #231F20
+
+  @media $laptop
+    font-size 16px
+    line-height 24px
 
 .no-csspointerevents .nice-select .nice-select-dropdown
   display none

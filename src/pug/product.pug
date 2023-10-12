@@ -23,22 +23,27 @@ html(lang="ru")
 						.product__details-inner
 							.product__details-row
 								section.inner-intro
-									.breadcrumbs
+									.breadcrumbs.inner-intro__breadcrumbs
 										ul.breadcrumbs__list
 											li.breadcrumbs__item
 												a.breadcrumbs__item-link(href="") Главная
 											li.breadcrumbs__item Батарейки Opticell basic
+									h1.common__h1.inner-intro__heading OPTICELL щелочные батарейки АА
 					
 							.product__details-row
 								.product__details-col
 									.product__gallery
 										.product__gallery-thumbs
-											ul.product__gallery-thumbs-list
-												li.product__gallery-thumbs-item
+											.product__gallery-thumbs-list
+												a.product__gallery-thumbs-item(data-fslightbox="product-gallery" href="images/products/product/product-01.png")
 													img.product__gallery-thumbs-item-image(src="images/products/product/product-01.png" alt="")
-												li.product__gallery-thumbs-item
+												a.product__gallery-thumbs-item(data-fslightbox="product-gallery" href="images/products/product/product-02.png")
 													img.product__gallery-thumbs-item-image(src="images/products/product/product-02.png" alt="")
-										.product__gallery-main
+												a.product__gallery-thumbs-item(data-fslightbox="product-gallery" href="images/products/product/product-01.png")
+													img.product__gallery-thumbs-item-image(src="images/products/product/product-01.png" alt="")
+												a.product__gallery-thumbs-item(data-fslightbox="product-gallery" href="images/products/product/product-02.png")
+													img.product__gallery-thumbs-item-image(src="images/products/product/product-02.png" alt="")
+										a.product__gallery-main(data-fslightbox="product-gallery" href="images/products/product/product-01.png")
 											img.product__gallery-main-image(src="images/products/product/product-01.png" alt="")
 
 									.product__kinds
@@ -69,7 +74,7 @@ html(lang="ru")
 											span.product__packages-heading Кол-во#[br]в упаковке
 
 											.product__packages-select
-												select
+												select.js-select
 													option(value="2") 2 шт.
 													option(value="4") 4 шт.
 								
@@ -105,9 +110,13 @@ html(lang="ru")
 													span Перезаряжаемость
 													span Нет
 
-										button.common__btn.product__buy-btn Купить сейчас
-											svg.product__buy-btn-icon
-												use(xlink:href="#plus")
+										.product__buy
+											button.common__btn.product__buy-btn.js-popover-btn(data-popover-target="where-to-buy") Купить сейчас
+												svg.product__buy-btn-icon
+													use(xlink:href="#plus")
+
+											.product__buy-popover.popover-container.js-popover(data-popover-name="where-to-buy")
+												//= partials/buy-popover.pug
 
 				.product__about
 					.container

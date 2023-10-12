@@ -7,6 +7,20 @@
   background-color $black
   overflow hidden
 
+  @media $laptop
+    max-height 744px
+    min-height 630px
+    padding 164px 0 30px
+
+  @media $tablet
+    height auto
+    max-height none
+    min-height auto
+    padding 113px 0 54px
+
+  @media $mobile
+    padding 121px 0 41px
+
   &__logo-image
     position absolute
     bottom 0
@@ -17,19 +31,44 @@
     fill $white
     opacity .03
 
+    @media $tablet
+      display none
+
   &__battery-image
     position absolute
     top 50%
     display block
     width 80%
+    max-width 1523px
+
+    @media $laptop
+      width 87%
+
+    @media $tablet
+      width 74%
+
+    @media $mobile
+      top 35%
 
     &:first-child
       right 100%
       transform translate(8%, -50%)
 
+      @media $laptop
+        transform translate(4%, -50%)
+
+      @media $tablet
+        transform translate(6%, -50%)
+
     &:last-child
       left 100%
       transform translate(-8%, -50%)
+
+      @media $laptop
+        transform translate(-4%, -50%)
+
+      @media $tablet
+        transform translate(-6%, -50%)
 
   &__container
     height 100%
@@ -40,16 +79,41 @@
     align-items center
     height 100%
 
+    @media $tablet
+      padding 0 9%
+
+    @media $mobile
+      flex-direction column-reverse
+      padding 0
+
   &__bear-image
     display block
     margin 0 auto
     max-width 27%
     max-height 100%
 
+    @media $tablet
+      max-width 33%
+
+    @media $mobile
+      width 73%
+      max-width none
+      max-height none
+
   &__info
     order -1
     width 42%
     margin 0 0 0 9%
+
+    @media $laptop
+      margin 0 0 0 6%
+
+    @media $tablet
+      margin 0
+
+    @media $mobile
+      width 100%
+      margin 19px 0 0
 
   &__heading
     font-size 88px
@@ -57,7 +121,25 @@
     font-weight 700
     color $white
 
+    @media $laptop
+      font-size 56px
+      line-height 53px
+
+    @media $tablet
+      font-size 40px
+      line-height 38px
+
   &__description
     max-width 618px
     margin 72px 0 0
     color $white
+
+    @media $laptop
+      max-width 400px
+      margin 69px 0 0
+
+    @media $tablet
+      margin 26px 0 0
+
+    @media $mobile
+      margin 34px 0 0

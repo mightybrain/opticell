@@ -4,9 +4,19 @@
     flex-direction column
     gap 160px
 
+    @media $laptop
+      gap 80px
+
+    @media $mobile
+      gap 64px
+
   &__item
     display flex
     gap 24px
+
+    @media $tablet
+      flex-direction column
+      gap 25px
 
     &-info
       display flex
@@ -15,8 +25,41 @@
       width calc(50% - 12px)
       padding 0 9% 0 0
 
+      @media $laptop
+        padding 0 6% 0 0
+
+      @media $tablet
+        flex-direction row
+        justify-content space-between
+        width 100%
+        padding 0
+
+      @media $mobile
+        flex-direction column
+
+    &-heading
+      @media $tablet
+        width calc(50% - 8px)
+
+      @media $mobile
+        width 100%
+
     &-description
       margin 29px 0 0
 
+      @media $laptop
+        margin 27px 0 0
+
+      @media $tablet
+        width calc(50% - 8px)
+        margin 0
+
+      @media $mobile
+        width 100%
+        margin 26px 0 0
+
     &-media
       width calc(50% - 12px)
+
+      @media $tablet
+        width 100%

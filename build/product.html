@@ -110,6 +110,9 @@
               <li class="header__menu-item"><a class="header__menu-item-link" href="">Контакты</a></li>
             </ul>
           </nav>
+          <button class="header__burger js-burger">
+            <div class="header__burger-line"></div>
+          </button>
         </div>
       </div>
     </header>
@@ -120,24 +123,21 @@
             <div class="product__details-inner">
               <div class="product__details-row">
                 <section class="inner-intro">
-                  <div class="breadcrumbs">
+                  <div class="breadcrumbs inner-intro__breadcrumbs">
                     <ul class="breadcrumbs__list">
                       <li class="breadcrumbs__item"><a class="breadcrumbs__item-link" href="">Главная</a></li>
                       <li class="breadcrumbs__item">Батарейки Opticell basic</li>
                     </ul>
                   </div>
+                  <h1 class="common__h1 inner-intro__heading">OPTICELL щелочные батарейки АА</h1>
                 </section>
               </div>
               <div class="product__details-row">
                 <div class="product__details-col">
                   <div class="product__gallery">
                     <div class="product__gallery-thumbs">
-                      <ul class="product__gallery-thumbs-list">
-                        <li class="product__gallery-thumbs-item"><img class="product__gallery-thumbs-item-image" src="images/products/product/product-01.png" alt=""></li>
-                        <li class="product__gallery-thumbs-item"><img class="product__gallery-thumbs-item-image" src="images/products/product/product-02.png" alt=""></li>
-                      </ul>
-                    </div>
-                    <div class="product__gallery-main"><img class="product__gallery-main-image" src="images/products/product/product-01.png" alt=""></div>
+                      <div class="product__gallery-thumbs-list"><a class="product__gallery-thumbs-item" data-fslightbox="product-gallery" href="images/products/product/product-01.png"><img class="product__gallery-thumbs-item-image" src="images/products/product/product-01.png" alt=""></a><a class="product__gallery-thumbs-item" data-fslightbox="product-gallery" href="images/products/product/product-02.png"><img class="product__gallery-thumbs-item-image" src="images/products/product/product-02.png" alt=""></a><a class="product__gallery-thumbs-item" data-fslightbox="product-gallery" href="images/products/product/product-01.png"><img class="product__gallery-thumbs-item-image" src="images/products/product/product-01.png" alt=""></a><a class="product__gallery-thumbs-item" data-fslightbox="product-gallery" href="images/products/product/product-02.png"><img class="product__gallery-thumbs-item-image" src="images/products/product/product-02.png" alt=""></a></div>
+                    </div><a class="product__gallery-main" data-fslightbox="product-gallery" href="images/products/product/product-01.png"><img class="product__gallery-main-image" src="images/products/product/product-01.png" alt=""></a>
                   </div>
                   <div class="product__kinds">
                     <div class="product__format"><span class="product__format-heading">Размер</span>
@@ -151,7 +151,7 @@
                     </div>
                     <div class="product__packages"><span class="product__packages-heading">Кол-во<br>в упаковке</span>
                       <div class="product__packages-select">
-                        <select>
+                        <select class="js-select">
                           <option value="2">2 шт.</option>
                           <option value="4">4 шт.</option>
                         </select>
@@ -174,11 +174,32 @@
                         <li class="product__params-item"><span>Перезаряжаемость</span><span>Нет</span></li>
                       </ul>
                     </div>
-                    <button class="common__btn product__buy-btn">Купить сейчас
-                      <svg class="product__buy-btn-icon">
-                        <use xlink:href="#plus"></use>
-                      </svg>
-                    </button>
+                    <div class="product__buy">
+                      <button class="common__btn product__buy-btn js-popover-btn" data-popover-target="where-to-buy">Купить сейчас
+                        <svg class="product__buy-btn-icon">
+                          <use xlink:href="#plus"></use>
+                        </svg>
+                      </button>
+                      <div class="product__buy-popover popover-container js-popover" data-popover-name="where-to-buy">
+                        <div class="popover">
+                          <button class="popover__close-btn js-popover-close-btn"></button>
+                          <div class="where-to-buy">
+                            <div class="where-to-buy__info">
+                              <h4 class="common__h4 where-to-buy__heading">Где купить?</h4>
+                              <div class="common__text where-to-buy__description">
+                                <p>Приобрести нашу продукцию можно в обычных магазинах вашего города, а также на маркетплейсах.</p>
+                              </div>
+                            </div>
+                            <ul class="where-to-buy__list">
+                              <li class="where-to-buy__item"><img class="where-to-buy__item-image" src="images/logo-round-ozon.png" alt=""><a class="common__btn where-to-buy__item-link" href="" target="_blank">Купить</a></li>
+                              <li class="where-to-buy__item"><img class="where-to-buy__item-image" src="images/logo-round-mm.png" alt=""><a class="common__btn where-to-buy__item-link" href="" target="_blank">Купить</a></li>
+                              <li class="where-to-buy__item"><img class="where-to-buy__item-image" src="images/logo-round-ym.png" alt=""><a class="common__btn where-to-buy__item-link" href="" target="_blank">Купить</a></li>
+                              <li class="where-to-buy__item"><img class="where-to-buy__item-image" src="images/logo-round-wb.png" alt=""><a class="common__btn where-to-buy__item-link" href="" target="_blank">Купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -199,12 +220,12 @@
                     </div>
                   </div>
                   <div class="about__item-media">
-                    <div class="video">
-                      <video class="video__frame" src="video/video.mp4" poster="images/content-01.jpg"></video>
-                      <button class="video__play-btn">
+                    <div class="video js-video">
+                      <video class="video__frame js-video-frame" src="video/video.mp4" poster="images/video-poster-01.jpg"></video>
+                      <button class="video__play-btn js-play-video-btn">
                         <svg class="video__play-btn-icon">
                           <use xlink:href="#play"></use>
-                        </svg>
+                        </svg><span class="common__text video__play-btn-label">Тестирование литиевых батареек</span>
                       </button>
                     </div>
                   </div>

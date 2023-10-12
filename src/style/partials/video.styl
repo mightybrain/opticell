@@ -6,6 +6,9 @@
     width 100%
     border-radius 24px
 
+    @media $tablet
+      border-radius 16px
+
   &__play-btn
     position absolute
     top 50%
@@ -20,6 +23,11 @@
     background-color alpha($white, .1)
     backdrop-filter blur(3px)
     cursor pointer
+    transition opacity .5s 0s ease
+
+    @media $tablet
+      width 80px
+      height 80px
 
     &-icon
       display block
@@ -28,6 +36,21 @@
       fill $white
       transition fill .5s 0s ease
 
+    &-label
+      position absolute
+      top calc(100% + 24px)
+      left 50%
+      transform translateX(-50%)
+      display block
+      width 564px
+      text-align center
+      color $white
+
 .video__play-btn:hover
   & .video__play-btn-icon
     fill $gold
+
+.video__frame_started
+  & + .video__play-btn
+    opacity 0
+    pointer-events none

@@ -15,6 +15,13 @@
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
 }
+@media $laptop {
+  .nice-select {
+    height: 56px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 .nice-select::after {
   border-bottom: 2px solid #a09e9f;
   border-right: 2px solid #a09e9f;
@@ -78,6 +85,12 @@
   line-height: 27px;
   font-weight: 500;
   color: #231f20;
+}
+@media $laptop {
+  .nice-select .option {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .no-csspointerevents .nice-select .nice-select-dropdown {
   display: none;

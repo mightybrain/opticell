@@ -15,6 +15,9 @@ li
 a
 	text-decoration none
 
+select
+	position absolute
+
 button
 	background none
 	border none
@@ -38,6 +41,12 @@ main
 	margin 0 auto
 	max-width 1792px
 
+	@media $laptop
+		width calc(100% - 80px)
+
+	@media $tablet
+		width calc(100% - 32px)
+
 @import "partials/header.styl"
 @import "partials/footer.styl"
 @import "partials/breadcrumbs.styl"
@@ -47,6 +56,9 @@ main
 @import "partials/media.styl"
 @import "partials/video.styl"
 @import "partials/about.styl"
+@import "partials/inner-intro.styl"
+@import "partials/popover.styl"
+@import "partials/where-to-buy.styl"
 
 @import "views/index.styl"
 @import "views/product.styl"

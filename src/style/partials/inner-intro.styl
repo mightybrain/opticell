@@ -1,0 +1,25 @@
+.inner-intro
+  &__heading
+    margin 32px 0 0
+    color $white
+
+    @media $tablet
+      margin 30px 0 0
+      font-size 32px
+      line-height 30px
+
+  &__breadcrumbs
+    @media $mobile
+      display flex
+      width calc(100% + 32px)
+      margin 0 0 0 -16px
+      padding 0 0 0 16px
+      overflow-x auto
+
+    &::after
+      content ""
+
+      @media $mobile
+        flex-shrink 0
+        display block
+        width 16px

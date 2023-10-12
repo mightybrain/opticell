@@ -1,0 +1,42 @@
+.popover-container
+  opacity 0
+  visibility hidden
+  transition opacity .5s 0s ease, visibility 0s .5s
+
+  &_visible
+    opacity 1
+    visibility visible
+    transition visibility 0s 0s, opacity .5s 0s ease
+
+.popover
+  position relative
+  width 576px
+  padding 32px
+  border-radius 8px
+  background-color $smoke
+
+  @media $laptop
+    width 492px
+
+  @media $tablet
+    width 100%
+
+  @media $mobile
+    padding 32px 16px
+
+  &__close-btn
+    position absolute
+    top 20px
+    right 20px
+    transform rotate(0)
+    display block
+    width 24px
+    height 24px
+    background-image url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 4L20 20M20 4L4 20' stroke='%23A09E9F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+    background-repeat no-repeat
+    background-size contain
+    transition transform .5s 0s ease
+    cursor pointer
+
+    &:hover
+      transform rotate(90deg)

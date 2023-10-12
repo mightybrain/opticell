@@ -1,8 +1,19 @@
 .footer
+  overflow hidden
+
   &__row
     &:first-child
       padding 80px 0
       background-color $white
+
+      @media $laptop
+        padding 65px 0 63px
+
+      @media $tablet
+        padding 33px 0 30px
+
+      @media $mobile
+        padding 33px 0 31px
 
     &:last-child
       background-color $black
@@ -10,15 +21,30 @@
     &-inner
       display flex
 
+      @media $tablet
+        flex-wrap wrap
+
+      @media $mobile
+        flex-direction column
+
   &__col
     display flex
     flex-direction column
     width calc(50% - 12px)
 
+    @media $mobile
+      width 100%
+
     &:first-child
       padding 0 0 0 5%
 
+      @media $laptop
+        padding 0
+
   &__logo
+    @media $tablet
+      margin 7px 0 0
+
     &-image
       display block
       width 207px
@@ -47,16 +73,29 @@
     display flex
     gap 24px
 
+    @media $mobile
+      flex-direction column
+      gap 32px
+
     &-group
       display flex
       flex-direction column
       gap 25px
       width calc(50% - 12px)
 
+      @media $tablet
+        gap 16px
+
+      @media $mobile
+        width 100%
+
     &-list
       display flex
       flex-direction column
       gap 17px
+
+      @media $tablet
+        gap 8px
 
     &-item
       &-link
@@ -67,18 +106,37 @@
         text-transform uppercase
         transition color .5s 0s ease
 
+        @media $laptop
+          font-size 15px
+          line-height 22px
+
+        @media $tablet
+          font-size 13px
+          line-height 19px  
+
         &:hover
           color $gold
 
   &__copyright
     position relative
     background-color $dust
-    height 100%
     padding 32px 5%
     font-size 18px
     line-height 27px
     font-weight 400
     color $black
+
+    @media $laptop
+      padding 32px 5% 32px 0
+      font-size 16px
+      line-height 24px
+
+    @media $tablet
+      z-index 0
+      width 100%
+      padding 24px 0
+      font-size 14px
+      line-height 21px
 
     &::before
       content ''
@@ -90,18 +148,37 @@
       height 100%
       background-color $dust
 
+      @media $tablet
+        z-index -1
+        right 50%
+        transform translateX(50%)
+
   &__credits
     flex-grow 1
     display flex
     align-items center
     justify-content space-between
-    height 100%
     padding 32px 5% 32px 9%
     font-size 13px
     line-height 27px
     font-weight 400
     color $white
     text-transform uppercase
+
+    @media $laptop
+      padding 32px 0 32px 64px
+      font-size 12px
+      line-height 24px
+
+    @media $tablet
+      width 100%
+      padding 24px 0
+      font-size 11px
+      line-height 16px
+
+    @media $mobile
+      flex-direction column
+      align-items flex-start
 
   &__rules
     color inherit
@@ -114,6 +191,9 @@
     color inherit
     transition color .5s 0s ease
 
+    @media $mobile
+      margin 25px 0 0
+
     &:hover
       color $gold
 
@@ -125,6 +205,9 @@
     display flex
     gap 24px
     justify-content space-between
+
+    @media $mobile
+      gap 33px
 
 .footer__social-item-link:hover
   & .footer__social-item-link-image

@@ -19,19 +19,74 @@
   text-transform: uppercase;
   background: none;
 }
+@media $laptop {
+  .common__h1 mark:not([class]),
+  .common__h4 mark:not([class]) {
+    font-size: 18px;
+  }
+}
+@media $tablet {
+  .common__h1 mark:not([class]),
+  .common__h4 mark:not([class]) {
+    margin: -24px 0 6px;
+    font-size: 16px;
+  }
+}
+@media $mobile {
+  .common__h1 mark:not([class]),
+  .common__h4 mark:not([class]) {
+    margin: 0 0 5px;
+  }
+}
 .common__h1 {
   font-size: 80px;
   line-height: 88px;
 }
+@media $laptop {
+  .common__h1 {
+    font-size: 64px;
+    line-height: 70px;
+  }
+}
+@media $tablet {
+  .common__h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
 .common__h4 {
   font-size: 32px;
   line-height: 32px;
+}
+@media $laptop {
+  .common__h4 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media $tablet {
+  .common__h4 {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .common__text {
   font-size: 18px;
   line-height: 27px;
   font-weight: 400;
   color: $black;
+}
+@media $laptop {
+  .common__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media $tablet {
+  .common__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 .common__text p:not([class]) {
   margin: 0;
@@ -46,12 +101,26 @@
   line-height: 27px;
   font-weight: 500;
   color: $black;
-  border: 2px solid $dust;
+  text-align: center;
+  border: 3px solid $dust;
   border-radius: 27px;
   -webkit-transition: color 0.5s 0s ease, border 0.5s 0s ease;
   transition: color 0.5s 0s ease, border 0.5s 0s ease;
 }
+@media $laptop {
+  .common__btn {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media $tablet {
+  .common__btn {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
 .common__btn:hover {
   color: $gold;
-  border: 2px solid $gold;
+  border: 3px solid $gold;
 }
