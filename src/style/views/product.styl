@@ -12,7 +12,7 @@
     gap 64px
     padding 0 0 64px
 
-  &__details
+  &__about
     position relative
     padding 168px 0 80px
     background-color $black
@@ -24,53 +24,69 @@
     @media $mobile
       padding 111px 0 80px
 
-    &-inner
-      display flex
-      flex-direction column
-      gap 40px
-      padding 0 0 0 9%
+    &::before
+      content ''
+      position absolute
+      left 202px
+      top 56px
+      display block
+      width 672px
+      height 672px
+      border-radius 50%
+      opacity .3
+      background var(--color-surface-invert, #FFF)
+      filter blur(150px)
 
       @media $laptop
-        padding 0 6%
+        left 173px
+        top 40px
+        width 432px
+        height 432px
+        filter blur(96px)
 
       @media $tablet
-        gap 27px
-        padding 0
+        top 133px
+        left -76px
+        width 328px
+        height 328px
+        filter blur(73px)
 
-    &-row
-      display flex
-      justify-content space-between
+  &__intro
+    position relative
+    margin 0 0 40px
+    padding 0 0 0 9%
+
+    @media $laptop
+      padding 0 6%
+
+    @media $tablet
+      margin 0 0 27px
+      padding 0
+
+  &__details
+    position relative
+    display flex
+    justify-content space-between
+    width 100%
+    padding 0 0 0 9%
+
+    @media $laptop
+      padding 0 6%
+
+    @media $tablet
+      flex-direction column
+      padding 0
+
+  &__kinds
+    display flex
+    flex-direction column
+    width 736px
+
+    @media $laptop
+      width 504px
+
+    @media $tablet
       width 100%
-
-      @media $tablet
-        flex-direction column
-
-    &-col
-      &:first-child
-        display flex
-        flex-direction column
-        width 736px
-
-        @media $laptop
-          width 504px
-
-        @media $tablet
-          width 100%
-
-      &:last-child
-        position relative
-        width calc(50% - 80px)
-
-        @media $laptop
-          width calc(50% - 20px)
-          margin 0 0 0 40px
-
-        @media $tablet
-          width 100%
-          margin 40px 0 0
-
-        @media $mobile
-          margin 44px 0 0
 
   &__gallery
     display flex
@@ -149,7 +165,7 @@
         @media $mobile
           max-width 224px
 
-  &__kinds
+  &__assortment
     display flex
     align-items flex-end
     gap 32px
@@ -244,6 +260,21 @@
 
     &-select
       width 122px
+
+  &__spec
+    position relative
+    width calc(50% - 80px)
+
+    @media $laptop
+      width calc(50% - 20px)
+      margin 0 0 0 40px
+
+    @media $tablet
+      width 100%
+      margin 40px 0 0
+
+    @media $mobile
+      margin 44px 0 0
 
   &__info
     display flex
@@ -390,7 +421,7 @@
       left 0
       width 100%
 
-  &__about
+  &__materials
     @media $tablet
       padding 24px 0 0
 

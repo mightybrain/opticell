@@ -18,8 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
   
     _init() {
       this._controllers.forEach(controller => {
-        controller.frame.addEventListener("pause", () => {
-          this.stopCurrentVideo();
+        controller.frame.addEventListener("play", () => {
+          this._setCurrentVideo(controller);
         })
         controller.btn.addEventListener("click", () => {
           this._startVideo(controller);
@@ -27,20 +27,21 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     }
   
-    _startVideo(controller) {
-      this.stopCurrentVideo();
+    _setCurrentVideo(controller) {
+      if (this._currentPlaying && this._currentPlaying !== controller) {
+        this.stopCurrentVideo();
+      }
+      this._currentPlaying = controller;
+    }
   
+    _startVideo(controller) {
       controller.frame.play();
       controller.frame.classList.add("video__frame_started");
       controller.frame.setAttribute("controls", true);
-      this._currentPlaying = controller;
     }
   
     stopCurrentVideo() {
       this._currentPlaying?.frame.pause();
-      this._currentPlaying?.frame.load();
-      this._currentPlaying?.frame.classList.remove("video__frame_started");
-      this._currentPlaying?.frame.removeAttribute("controls");
       this._currentPlaying = null;
     }
   }
@@ -109,7 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
     _openPopover(controller) {
       this.closeCurrentPopover();
   
-      controller.popover.classList.add("popover-container_visible");
+      controller.popover.classList.add("popover_visible");
       this._currentOpened = controller;
     }
   
@@ -117,16 +118,14 @@ window.addEventListener('DOMContentLoaded', () => {
       if (!this._currentOpened) {
         return;
       }
-      /* this._controllers.forEach(({ btn }) => {
-  
-      })
-      if (!this._currentOpened.popover.contains(event.target)) {
+      const { popover, btn } = this._currentOpened;
+      if (!popover.contains(target) && !btn.contains(target)) {
         this.closeCurrentPopover();
-      } */
+      }
     }
   
     closeCurrentPopover() {
-      this._currentOpened?.popover.classList.remove("popover-container_visible");
+      this._currentOpened?.popover.classList.remove("popover_visible");
       this._currentOpened = null;
     }
   }

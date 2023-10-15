@@ -29,7 +29,7 @@ class PopoverController {
   _openPopover(controller) {
     this.closeCurrentPopover();
 
-    controller.popover.classList.add("popover-container_visible");
+    controller.popover.classList.add("popover_visible");
     this._currentOpened = controller;
   }
 
@@ -37,16 +37,14 @@ class PopoverController {
     if (!this._currentOpened) {
       return;
     }
-    /* this._controllers.forEach(({ btn }) => {
-
-    })
-    if (!this._currentOpened.popover.contains(event.target)) {
+    const { popover, btn } = this._currentOpened;
+    if (!popover.contains(target) && !btn.contains(target)) {
       this.closeCurrentPopover();
-    } */
+    }
   }
 
   closeCurrentPopover() {
-    this._currentOpened?.popover.classList.remove("popover-container_visible");
+    this._currentOpened?.popover.classList.remove("popover_visible");
     this._currentOpened = null;
   }
 }

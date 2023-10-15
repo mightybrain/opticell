@@ -1,19 +1,12 @@
-.popover-container
-  opacity 0
-  visibility hidden
-  transition opacity .5s 0s ease, visibility 0s .5s
-
-  &_visible
-    opacity 1
-    visibility visible
-    transition visibility 0s 0s, opacity .5s 0s ease
-
 .popover
   position relative
   width 576px
   padding 32px
   border-radius 8px
   background-color $smoke
+  opacity 0
+  visibility hidden
+  transition opacity .5s 0s ease, visibility 0s .5s
 
   @media $laptop
     width 492px
@@ -23,6 +16,11 @@
 
   @media $mobile
     padding 32px 16px
+
+  &_visible
+    opacity 1
+    visibility visible
+    transition visibility 0s 0s, opacity .5s 0s ease
 
   &__close-btn
     position absolute

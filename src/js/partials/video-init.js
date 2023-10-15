@@ -11,8 +11,8 @@ class VideoController {
 
   _init() {
     this._controllers.forEach(controller => {
-      controller.frame.addEventListener("pause", () => {
-        this.stopCurrentVideo();
+      controller.frame.addEventListener("play", () => {
+        this._setCurrentVideo(controller);
       })
       controller.btn.addEventListener("click", () => {
         this._startVideo(controller);
@@ -20,20 +20,21 @@ class VideoController {
     })
   }
 
-  _startVideo(controller) {
-    this.stopCurrentVideo();
+  _setCurrentVideo(controller) {
+    if (this._currentPlaying && this._currentPlaying !== controller) {
+      this.stopCurrentVideo();
+    }
+    this._currentPlaying = controller;
+  }
 
+  _startVideo(controller) {
     controller.frame.play();
     controller.frame.classList.add("video__frame_started");
     controller.frame.setAttribute("controls", true);
-    this._currentPlaying = controller;
   }
 
   stopCurrentVideo() {
     this._currentPlaying?.frame.pause();
-    this._currentPlaying?.frame.load();
-    this._currentPlaying?.frame.classList.remove("video__frame_started");
-    this._currentPlaying?.frame.removeAttribute("controls");
     this._currentPlaying = null;
   }
 }

@@ -21,6 +21,37 @@
   @media $mobile
     padding 121px 0 41px
 
+  &::before
+    content ''
+    position absolute
+    left -704px
+    top -174px
+    display block
+    width 1062px
+    height 1062px
+    border-radius 50%
+    opacity .3
+    background var(--color-surface-invert, #FFF)
+    filter blur(307px)
+
+    @media $laptop
+      left -316px
+      top -41px
+      width 766px
+      height 766px
+      filter blur(221px)
+
+    @media $tablet
+      top 66px
+      left 117px
+      width 332px
+      height 332px
+      filter blur(96px)
+
+    @media $mobile
+      top 89px
+      left -106px
+
   &__logo-image
     position absolute
     bottom 0
